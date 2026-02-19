@@ -12,7 +12,7 @@ const projects = [
       { name: "threejs", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
-    image: "https://via.placeholder.com/300x200", // Placeholder
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
     source_code_link: "https://github.com/",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
       { name: "restapi", color: "green-text-gradient" },
       { name: "scss", color: "pink-text-gradient" },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
     source_code_link: "https://github.com/",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
       { name: "supabase", color: "green-text-gradient" },
       { name: "css", color: "pink-text-gradient" },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
     source_code_link: "https://github.com/",
   },
 ];

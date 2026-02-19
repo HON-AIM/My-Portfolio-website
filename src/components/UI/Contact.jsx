@@ -94,16 +94,16 @@ const Contact = () => {
         </form>
 
         <div className="mt-10 flex gap-4">
-             <a href="#" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
+             <a href="https://github.com/HON-AIM" target="_blank" rel="noopener noreferrer" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
                 <Github size={24} />
              </a>
-             <a href="#" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
+             <a href="https://www.linkedin.com/in/israel-adeosun-182b78235" target="_blank" rel="noopener noreferrer" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
                 <Linkedin size={24} />
              </a>
-             <a href="#" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
+             <a href="https://x.com/IsraelMiracle13" target="_blank" rel="noopener noreferrer" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
                 <Twitter size={24} />
              </a>
-             <a href="#" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
+             <a href="mailto:israelmiracle12@gmail.com" className="p-3 bg-tertiary rounded-full hover:bg-white hover:text-tertiary transition-all duration-300">
                  <Mail size={24} />
              </a>
         </div>

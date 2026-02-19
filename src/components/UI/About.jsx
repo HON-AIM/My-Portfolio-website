@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn, textVariant } from '../../utils/motion';
+import profilePic from '../../assets/profile.jpg';
 
 const services = [
   {
@@ -77,7 +78,7 @@ const About = () => {
               {/* Profile Picture Placeholder - Replace src with your image URL */}
               <div className="w-[200px] h-[200px] rounded-full p-1 violet-gradient">
                 <img 
-                    src="https://via.placeholder.com/200" 
+                    src={profilePic}
                     alt="Israel Miracle" 
                     className="w-full h-full object-cover rounded-full border-4 border-primary" 
                 />
