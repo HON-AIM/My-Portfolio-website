@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
 import { fadeIn, textVariant } from '../../utils/motion';
 
 // PROJECT IMAGE: replace with a real screenshot or mockup of this project (1200x800px recommended)
@@ -8,7 +9,11 @@ import iyosiolaFoodsImg from '../../assets/projects/iyosiola-foods.svg';
 import ghlAutomationImg from '../../assets/projects/ghl-automation.svg';
 import courseFunnelImg from '../../assets/projects/course-funnel.svg';
 import fintechAppImg from '../../assets/projects/fintech-app.svg';
+import churchImg from '../../assets/projects/church.svg';
 
+// LINKS: fill in demoUrl for any project with a live/deployed version,
+// and githubUrl for any project whose repo is public. Leave either as an
+// empty string to hide that button.
 const projects = [
   {
     name: "Lead Distribution Platform",
@@ -21,7 +26,8 @@ const projects = [
       "Cut lead response time significantly and eliminated duplicate assignments.",
     tags: ["Node.js", "BullMQ", "GoHighLevel", "PostgreSQL"],
     image: leadDistributionImg,
-    link: "",
+    demoUrl: "https://leads-management-saas-xu8h.vercel.app/",
+    githubUrl: "",
   },
   {
     name: "Iyosiola Foods E-Commerce",
@@ -34,7 +40,22 @@ const projects = [
       "Enabled online orders and payments for the first time.",
     tags: ["Next.js", "Prisma", "PostgreSQL", "Paystack"],
     image: iyosiolaFoodsImg,
-    link: "",
+    demoUrl: "https://iyosi-foods-web-app.vercel.app",
+    githubUrl: "",
+  },
+  {
+    name: "Grace Missionary Baptist Church",
+    client: "Church Organization",
+    problem:
+      "The church had no digital presence, making it hard for the community to find service times, ministries, and giving details.",
+    solution:
+      "Built a modern church website with service schedules, ministries, sermons, pastor's welcome, prayer requests, and online giving powered by Paystack.",
+    result:
+      "Gave the church a welcoming online home that connects visitors to worship, ministry, and giving.",
+    tags: ["React", "Vite", "Tailwind CSS", "Vercel"],
+    image: churchImg,
+    demoUrl: "https://grace-missionary-baptist-church.vercel.app",
+    githubUrl: "",
   },
   {
     name: "GoHighLevel Automation Suite",
@@ -47,7 +68,8 @@ const projects = [
       "Freed up an estimated 10+ hours per week for the agency team.",
     tags: ["GoHighLevel", "Zapier", "Automation"],
     image: ghlAutomationImg,
-    link: "",
+    demoUrl: "",
+    githubUrl: "",
   },
   {
     name: "Course Funnel & Email Sequence",
@@ -60,7 +82,8 @@ const projects = [
       "Gave the client a repeatable, automated way to launch to a cold audience.",
     tags: ["Kajabi", "Systeme.io", "Email Marketing"],
     image: courseFunnelImg,
-    link: "",
+    demoUrl: "",
+    githubUrl: "",
   },
   {
     name: "Fintech Web App (Loans, Investment & Forex Trading Platform)",
@@ -73,11 +96,12 @@ const projects = [
       "Gave users one secure platform to apply for loans, manage investments, and access forex resources with a smooth experience.",
     tags: ["React", "Node.js", "REST API", "PostgreSQL"],
     image: fintechAppImg,
-    link: "",
+    demoUrl: "",
+    githubUrl: "",
   },
 ];
 
-const ProjectCard = ({ index, name, client, problem, solution, result, tags, image, link }) => {
+const ProjectCard = ({ index, name, client, problem, solution, result, tags, image, demoUrl, githubUrl }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
@@ -121,15 +145,31 @@ const ProjectCard = ({ index, name, client, problem, solution, result, tags, ima
             ))}
           </div>
 
-          {link && (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-1.5 text-ember hover:text-ember-hover font-medium text-sm transition-colors duration-300"
-            >
-              View Project →
-            </a>
+          {(demoUrl || githubUrl) && (
+            <div className="mt-5 flex flex-wrap items-center gap-2.5">
+              {demoUrl && (
+                <a
+                  href={demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-ember hover:bg-ember-hover text-ink font-semibold text-sm rounded-full px-4 py-2 transition-colors duration-300"
+                >
+                  <ExternalLink size={14} />
+                  Live Demo
+                </a>
+              )}
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 border border-surface-border hover:border-ember text-paper hover:text-ember font-medium text-sm rounded-full px-4 py-2 transition-colors duration-300"
+                >
+                  <Github size={14} />
+                  View Code
+                </a>
+              )}
+            </div>
           )}
         </div>
       </div>
