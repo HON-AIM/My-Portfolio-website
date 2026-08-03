@@ -31,12 +31,12 @@ const Hero = () => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="order-first lg:order-last flex-shrink-0"
         >
-          <div className="w-[260px] h-[260px] rounded-full p-1.5 ember-gradient shadow-glow">
+          <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full p-1.5 ember-gradient shadow-glow">
             <img
               src={profilePic}
               alt="Israel Miracle, full-stack developer and digital systems builder"
-              width={260}
-              height={260}
+              width={320}
+              height={320}
               className="w-full h-full object-cover rounded-full border-4 border-ink"
             />
           </div>

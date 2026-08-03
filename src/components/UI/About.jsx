@@ -4,7 +4,7 @@ import { CodeXml, Users, Globe, ShieldCheck } from 'lucide-react';
 import { fadeIn, textVariant } from '../../utils/motion';
 // PHOTO: replace src/assets/profile.jpg with your own headshot
 // (recommended: 800x800px, square, good lighting, plain/blurred background).
-import profilePic from '../../assets/profile.jpg';
+import profilePic from '../../assets/profile 2.png';
 
 const aboutBio =
   "I'm Israel Miracle — 5+ years of freelance experience, working directly with clients rather than through an agency layer. Think of me as one person who can own your entire digital funnel end-to-end: web design and development, custom SaaS builds, funnels across GoHighLevel, Kajabi, Systeme.io, Webflow, WordPress, and Shopify, plus email marketing and automation. I use AI-assisted agentic/vibe coding workflows to ship faster without cutting quality.";
@@ -33,15 +33,15 @@ const About = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="w-full max-w-[420px] flex-shrink-0"
+          className="w-full max-w-[360px] flex-shrink-0"
         >
           <div className="rounded-2xl p-1.5 ember-gradient shadow-card">
             <img
               src={profilePic}
               alt="Israel Miracle, full-stack developer and digital systems builder"
-              width={420}
-              height={420}
-              className="w-full h-auto aspect-square object-cover rounded-2xl border-4 border-ink"
+              width={867}
+              height={1084}
+              className="w-full h-auto rounded-2xl border-4 border-ink"
             />
           </div>
         </motion.div>
