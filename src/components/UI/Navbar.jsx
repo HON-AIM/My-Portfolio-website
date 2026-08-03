@@ -27,10 +27,10 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => window.scrollTo(0, 0)}>
           <div className="flex flex-col leading-tight">
-            <p className="font-display text-white text-[18px] font-bold tracking-tight cursor-pointer">
-              Israel Miracle
+            <p className="font-display text-white text-[22px] sm:text-[26px] font-bold tracking-tight cursor-pointer leading-none">
+              Israel <span className="text-ember">Miracle</span>
             </p>
-            <p className="hidden md:block text-paper-faint text-xs font-medium tracking-wide mt-0.5">
+            <p className="hidden md:block text-paper-faint text-xs font-medium tracking-wide mt-1.5">
               Web · Funnels · SaaS
             </p>
           </div>
@@ -98,7 +98,9 @@ const Navbar = () => {
               className="absolute top-0 right-0 h-full w-[78%] max-w-sm bg-ink/95 backdrop-blur-xl border-l border-surface-border p-6 flex flex-col"
             >
               <div className="flex items-center justify-between">
-                <p className="font-display text-white font-bold">Israel Miracle</p>
+                <p className="font-display text-white text-[22px] font-bold">
+                  Israel <span className="text-ember">Miracle</span>
+                </p>
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
