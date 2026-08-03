@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F0F16"/>
+      <stop offset="100%" stop-color="#14141C"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="20%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#FF7A3D" stop-opacity="0.3"/>
+      <stop offset="55%" stop-color="#FF7A3D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="electric" cx="85%" cy="75%" r="70%">
+      <stop offset="0%" stop-color="#6C8CFF" stop-opacity="0.24"/>
+      <stop offset="55%" stop-color="#6C8CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#ember)"/>
+  <rect width="1200" height="800" fill="url(#electric)"/>
+  <text x="64" y="420" font-family="Space Grotesk, Arial, sans-serif" font-size="52" font-weight="700" fill="#F5F5F7">Iyosiola Foods E-Commerce</text>
+  <text x="64" y="478" font-family="Inter, Arial, sans-serif" font-size="24" fill="#6B6B7D">Project placeholder — replace with a real screenshot</text>
+</svg>

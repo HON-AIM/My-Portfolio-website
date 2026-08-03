@@ -1,94 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CodeXml, Users, Globe, ShieldCheck } from 'lucide-react';
 import { fadeIn, textVariant } from '../../utils/motion';
+// PHOTO: replace src/assets/profile.jpg with your own headshot
+// (recommended: 800x800px, square, good lighting, plain/blurred background).
 import profilePic from '../../assets/profile.jpg';
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: "https://cdn-icons-png.flaticon.com/512/3242/3242257.png", 
-  },
-  {
-    title: "React Native Developer",
-    icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
-  },
-  {
-    title: "Backend Developer",
-    icon: "https://cdn-icons-png.flaticon.com/512/2166/2166823.png",
-  },
-  {
-    title: "Content Creator",
-    icon: "https://cdn-icons-png.flaticon.com/512/3069/3069172.png",
-  },
-];
+const aboutBio =
+  "I'm Israel Miracle — 5+ years of freelance experience, working directly with clients rather than through an agency layer. Think of me as one person who can own your entire digital funnel end-to-end: web design and development, custom SaaS builds, funnels across GoHighLevel, Kajabi, Systeme.io, Webflow, WordPress, and Shopify, plus email marketing and automation. I use AI-assisted agentic/vibe coding workflows to ship faster without cutting quality.";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <div className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-            max: 45,
-            scale: 1,
-            speed: 450
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </div>
-);
+const badges = [
+  { icon: CodeXml, title: "5+ Years Experience" },
+  { icon: Users, title: "30+ Clients Served" },
+  { icon: Globe, title: "Remote-first, Global Clients" },
+  { icon: ShieldCheck, title: "GoHighLevel Certified" },
+];
 
 const About = () => {
   return (
-    <section id="about" className="max-w-7xl mx-auto relative z-0 py-16 px-6 sm:py-24 lg:px-16">
-      <motion.div variants={textVariant()}>
-        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Introduction</p>
-        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Overview.</h2>
+    <section id="about" className="relative z-0 max-w-7xl mx-auto py-16 px-6 sm:py-24 lg:px-16">
+      <motion.div variants={textVariant(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+        <p className="section-heading-eyebrow">WHO I AM</p>
+        <h2 className="mt-4 font-display text-white font-black md:text-[48px] sm:text-[40px] text-[30px] leading-[1.1] max-w-3xl">
+          Not just a developer — a full-stack digital partner.
+        </h2>
       </motion.div>
 
-      <div className="flex flex-col md:flex-row gap-10 items-center">
-          <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+      <div className="mt-12 flex flex-col md:flex-row items-center gap-12">
+        {/* Photo — left on desktop, stacked on mobile (mirrors Hero) */}
+        <motion.div
+          variants={fadeIn("right", "", 0.2, 0.8)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="w-full max-w-[420px] flex-shrink-0"
+        >
+          <div className="rounded-2xl p-1.5 ember-gradient shadow-card">
+            <img
+              src={profilePic}
+              alt="Israel Miracle, full-stack developer and digital systems builder"
+              width={420}
+              height={420}
+              className="w-full h-auto aspect-square object-cover rounded-2xl border-4 border-ink"
+            />
+          </div>
+        </motion.div>
+
+        {/* Bio */}
+        <motion.div
+          variants={fadeIn("left", "", 0.1, 0.8)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="flex-1"
+        >
+          <p className="text-paper-muted text-[17px] leading-[30px]">
+            {aboutBio}
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Credibility badges */}
+      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+        {badges.map(({ icon: Icon, title }) => (
+          <motion.div
+            key={title}
+            variants={fadeIn("up", "spring", 0.1, 0.6)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] flex-1"
+            className="bg-surface border border-surface-border rounded-2xl p-5 hover:border-ember transition-colors duration-300"
           >
-            I'm a skilled Fullstack Developer with deep knowledge in TypeScript,
-            JavaScript, and expertise in frameworks like React, Vue, Angular, Node.js, and
-            Three.js. I'm a quick learner and collaborate closely with clients to
-            create efficient, scalable, and user-friendly solutions that solve
-            real-world problems. Let's work together to bring your ideas to life!
-          </motion.p>
-          
-          <motion.div 
-            variants={fadeIn("left", "", 0.3, 1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex-shrink-0"
-          >
-              {/* Profile Picture Placeholder - Replace src with your image URL */}
-              <div className="w-[200px] h-[200px] rounded-full p-1 violet-gradient">
-                <img 
-                    src={profilePic}
-                    alt="Israel Miracle" 
-                    className="w-full h-full object-cover rounded-full border-4 border-primary" 
-                />
-              </div>
+            <div className="w-fit p-2.5 rounded-xl bg-ink-soft">
+              <Icon size={22} className="text-signal" />
+            </div>
+            <p className="mt-4 text-paper font-medium text-[15px] leading-snug">{title}</p>
           </motion.div>
-      </div>
-
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </section>
