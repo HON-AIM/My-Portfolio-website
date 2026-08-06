@@ -2,7 +2,8 @@ import { useState, useRef, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
 import { slideIn } from '../../utils/motion';
-import { Github, Linkedin, Twitter, Mail, MessageCircle, Phone, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
+import ConnectWithUs from './ConnectWithUs';
 
 // Lazily loaded 3D canvas — keeps three.js out of the initial bundle.
 const EarthCanvas = lazy(() => import('../Canvas/Earth'));
@@ -14,39 +15,6 @@ const PROJECT_TYPES = [
   "E-Commerce Store",
   "Email Marketing/Automation",
   "Something Else",
-];
-
-const SOCIALS = [
-  {
-    href: "https://github.com/HON-AIM",
-    label: "GitHub",
-    Icon: Github,
-  },
-  {
-    href: "https://www.linkedin.com/in/israel-adeosun-182b78235",
-    label: "LinkedIn",
-    Icon: Linkedin,
-  },
-  {
-    href: "https://x.com/IsraelMiracle13",
-    label: "X",
-    Icon: Twitter,
-  },
-  {
-    href: "https://wa.me/2349036055170",
-    label: "WhatsApp",
-    Icon: MessageCircle,
-  },
-  {
-    href: "tel:+2349036055170",
-    label: "Phone",
-    Icon: Phone,
-  },
-  {
-    href: "mailto:israelmiracle12@gmail.com",
-    label: "Email",
-    Icon: Mail,
-  },
 ];
 
 const inputClasses =
@@ -202,19 +170,8 @@ const Contact = () => {
           <ValidationError field={false} errors={state.errors} className="text-ember text-sm" />
         </form>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
-          {SOCIALS.map(({ href, label, Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              aria-label={label}
-              className="p-3 bg-surface border border-surface-border rounded-xl text-paper-muted hover:bg-ember hover:text-ink hover:border-ember transition-all duration-300"
-            >
-              <Icon size={20} />
-            </a>
-          ))}
+        <div className="mt-10">
+          <ConnectWithUs />
         </div>
 
         <p className="mt-6 text-paper-faint text-sm">
