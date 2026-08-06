@@ -18,20 +18,17 @@ const ConnectWithUs = () => {
   return (
     <div className="connect-with-us">
       <p className="section-heading-eyebrow">OR CONNECT DIRECTLY</p>
-      <h3 className="mt-2 font-display text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-ember via-electric to-signal">
+      <h3 className="mt-2 font-display text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-ember via-electric to-signal">
         Connect <span className="text-white">With Us</span>
       </h3>
-      <p className="mt-3 text-paper-muted text-[15px] leading-relaxed">
-        Reach me on any platform below — I typically respond within 24 hours.
-      </p>
 
       <div
-        className="relative w-full max-w-2xl mt-8 rounded-3xl bg-gradient-to-br from-surface to-ink border border-surface-border shadow-2xl overflow-hidden p-8 transition-all duration-500 hover:scale-[1.02]"
+        className="relative w-full mt-5 rounded-2xl bg-gradient-to-br from-surface to-ink border border-surface-border overflow-hidden p-4 transition-all duration-500 hover:scale-[1.02]"
         style={{
-          boxShadow: "0 0 50px rgba(255, 122, 61, 0.25), 0 0 80px rgba(108, 140, 255, 0.18)",
+          boxShadow: "0 0 40px rgba(255, 122, 61, 0.18), 0 0 60px rgba(108, 140, 255, 0.12)",
         }}
       >
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-start gap-4">
           {SOCIALS.map(({ href, label, Icon, brand }) => (
             <a
               key={label}
@@ -42,7 +39,7 @@ const ConnectWithUs = () => {
               className={`social-icon ${brand}`}
             >
               <div className="icon-container">
-                <Icon size={32} className="h-8 w-8 text-white" />
+                <Icon size={22} className="h-[22px] w-[22px] text-white" />
               </div>
               <span className="icon-label">{label}</span>
             </a>
@@ -63,8 +60,8 @@ const ConnectWithUs = () => {
 
         .connect-with-us .icon-container {
           display: inline-flex;
-          width: 64px;
-          height: 64px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           transition: all 0.3s ease;
           position: relative;
@@ -75,25 +72,19 @@ const ConnectWithUs = () => {
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        @media (min-width: 640px) {
-          .connect-with-us .icon-container {
-            width: 80px;
-            height: 80px;
-          }
-        }
-
         .connect-with-us .social-icon:hover .icon-container {
-          transform: translateY(-10px) scale(1.1);
+          transform: translateY(-6px) scale(1.1);
         }
 
         .connect-with-us .social-icon:hover .icon-label {
           opacity: 1;
-          transform: translateY(5px);
+          transform: translateY(3px);
         }
 
         .connect-with-us .icon-label {
-          margin-top: 12px;
+          margin-top: 8px;
           color: #f5f5f7;
+          font-size: 12px;
           font-weight: 500;
           opacity: 0.7;
           transition: all 0.3s ease;

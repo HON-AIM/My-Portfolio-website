@@ -170,7 +170,7 @@ const Contact = () => {
           <ValidationError field={false} errors={state.errors} className="text-ember text-sm" />
         </form>
 
-        <div className="mt-10">
+        <div className="mt-8">
           <ConnectWithUs />
         </div>
 
