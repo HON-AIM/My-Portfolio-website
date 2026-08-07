@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="max-w-7xl mx-auto relative z-0 py-16 px-6 sm:py-24 lg:px-16 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
+      className="max-w-7xl mx-auto relative z-0 py-16 px-6 sm:py-24 lg:px-16 flex xl:flex-row flex-col gap-10 overflow-hidden"
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}

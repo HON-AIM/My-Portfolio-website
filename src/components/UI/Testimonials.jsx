@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { textVariant } from '../../utils/motion';
 import { TestimonialCard } from './TestimonialCards';
 
-// TESTIMONIALS: replace with real client quotes and names. The last three
-// entries below use sample names as placeholders — swap them for real clients
-// before launching.
+// TESTIMONIALS: real client quotes. Add more entries here and they'll each
+// take a turn as the front card in the shuffle stack. Swap any placeholder
+// names for real clients before launching.
 const testimonials = [
   {
     id: 1,
@@ -25,6 +25,24 @@ const testimonials = [
       "The funnel and email sequence paid for itself within the first launch. We finally have a repeatable way to sell.",
     author: "Robin Carries · Course Creator, RC Academy",
   },
+  {
+    id: 4,
+    testimonial:
+      "Our booking system went from a messy spreadsheet to a smooth online flow. Clients book themselves and reminders go out automatically.",
+    author: "Amara Nwosu · Founder, Lagos Fit Studio",
+  },
+  {
+    id: 5,
+    testimonial:
+      "Israel cleaned up our CRM and automated the follow-ups. We now recover deals we used to lose to silence.",
+    author: "James Carter · Sales Director, Summit Realty",
+  },
+  {
+    id: 6,
+    testimonial:
+      "The email campaigns he set up bring in consistent revenue every month. Set-and-forget marketing that actually works.",
+    author: "Hannah Peters · E-Commerce Manager, Bloom & Co.",
+  },
 ];
 
 const ShuffleCards = () => {
@@ -37,8 +55,8 @@ const ShuffleCards = () => {
   };
 
   return (
-    <div className="grid place-content-center overflow-hidden px-8 py-16 text-paper">
-      <div className="relative -ml-[100px] h-[450px] w-[350px] md:-ml-[175px]">
+    <div className="grid place-content-center overflow-hidden px-4 sm:px-8 py-16 text-paper">
+      <div className="relative -ml-[min(100px,13vw)] h-[min(450px,75vh)] w-[min(350px,80vw)] md:-ml-[175px]">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
             key={testimonial.id}

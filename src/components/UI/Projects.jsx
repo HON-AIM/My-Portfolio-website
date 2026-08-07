@@ -10,6 +10,7 @@ import ghlAutomationImg from '../../assets/projects/ghl-automation.svg';
 import courseFunnelImg from '../../assets/projects/course-funnel.svg';
 import fintechAppImg from '../../assets/projects/fintech-app.svg';
 import churchImg from '../../assets/projects/church.svg';
+import portfolioImg from '../../assets/projects/portfolio.svg';
 
 // LINKS: fill in demoUrl for any project with a live/deployed version,
 // and githubUrl for any project whose repo is public. Leave either as an
@@ -98,6 +99,20 @@ const projects = [
     image: fintechAppImg,
     demoUrl: "",
     githubUrl: "",
+  },
+  {
+    name: "Portfolio Website (This Site)",
+    client: "Personal Brand",
+    problem:
+      "Needed a high-converting portfolio that showcased services, projects, skills, and a contact funnel in one polished place.",
+    solution:
+      "Designed and built this custom React + Vite site with a custom Ink & Ember design system, animated 3D starfield and earth canvases, drag-to-shuffle client testimonials, and a Formspree-powered contact form.",
+    result:
+      "A fast, responsive single-page portfolio that turns visitors into leads across phones, tablets, laptops, and large monitors.",
+    tags: ["React", "Vite", "Tailwind CSS", "Three.js"],
+    image: portfolioImg,
+    demoUrl: "",
+    githubUrl: "https://github.com/HON-AIM/My-Portfolio-website",
   },
 ];
 

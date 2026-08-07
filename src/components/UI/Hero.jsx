@@ -31,7 +31,7 @@ const Hero = () => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="order-first lg:order-last flex-shrink-0"
         >
-          <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full p-1.5 ember-gradient shadow-glow">
+          <div className="w-[210px] h-[210px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px] rounded-full p-1.5 ember-gradient shadow-glow">
             <img
               src={profilePic}
               alt="Israel Miracle, full-stack developer and digital systems builder"

@@ -33,7 +33,7 @@ export const TestimonialCard = ({ handleShuffle, testimonial, position, id, auth
         dragRef.current = 0;
       }}
       transition={{ duration: 0.35 }}
-      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-surface-border bg-surface/60 p-6 shadow-card backdrop-blur-md ${
+      className={`absolute left-0 top-0 grid h-[min(450px,75vh)] w-[min(350px,80vw)] select-none place-content-center space-y-6 rounded-2xl border-2 border-surface-border bg-surface/60 p-6 shadow-card backdrop-blur-md ${
         isFront ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >

@@ -68,14 +68,14 @@ const techGroups = [
 ];
 
 const sphereClass =
-  "sphere w-24 h-24 rounded-full border border-surface-border hover:border-ember hover:shadow-glow transition-all duration-300 flex items-center justify-center overflow-hidden";
+  "sphere w-16 h-16 sm:w-24 sm:h-24 rounded-full border border-surface-border hover:border-ember hover:shadow-glow transition-all duration-300 flex items-center justify-center overflow-hidden";
 
 const TechItem = ({ item }) => {
   if ("Icon" in item) {
     const IconComp = item.Icon;
     return (
       <div className={sphereClass}>
-        <IconComp size={30} className="text-ember" />
+        <IconComp size={26} className="text-ember" />
       </div>
     );
   }
