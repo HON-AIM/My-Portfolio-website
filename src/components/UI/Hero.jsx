@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-// PHOTO: replace src/assets/profile.jpg with your own headshot
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia(query).matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const onChange = (e) => setMatches(e.matches);
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, [query]);
+
+  return matches;
+};
+
+// PHOTO: replace src/assets/profile.png with your own headshot
 // (recommended: 800x800px, square, good lighting, plain/blurred background).
-import profilePic from '../../assets/profile.jpg';
+import profilePic from '../../assets/profile.png';
 
 const heroStats = [
   { value: "5+", label: "Years Experience" },
@@ -13,6 +28,8 @@ const heroStats = [
 ];
 
 const Hero = () => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden flex flex-col">
       {/* Animated mesh background — slow ambient drift, not distracting */}
@@ -20,7 +37,7 @@ const Hero = () => {
         aria-hidden="true"
         className="absolute inset-0 bg-mesh"
         style={{ scale: 1.15, willChange: "transform" }}
-        animate={{ x: [0, -30, 0], y: [0, 20, 0] }}
+        animate={isDesktop ? { x: [0, -30, 0], y: [0, 20, 0] } : undefined}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
 
